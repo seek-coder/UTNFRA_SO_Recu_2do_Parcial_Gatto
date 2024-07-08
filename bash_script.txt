@@ -1,0 +1,49 @@
+#!/bin/bash
+clear
+
+LISTA_URL="/home/bgatto/UTN-FRA_SO_Examenes/202406_Recu/bash_script/Lista_URL.txt"
+
+SALIDA="/tmp/head-heck"
+
+# Fecha y hora actual en formato yyyymmdd_hhmmss
+TIMESTAMP=$(date +"%Y%m%d_%H%M%S")
+
+# mas variables para cada directorio
+OK_DIR="$SALIDA/ok"
+ERROR_CLIENTE_DIR="$SALIDA/Error/cliente"
+ERROR_SERVIDOR_DIR="$SALIDA/Error/servidor"
+
+# estructura pedida
+mkdir -p "$OK_DIR"
+mkdir -p "$ERROR_CLIENTE_DIR"
+mkdir -p "$ERROR_SERVIDOR_DIR"
+
+# salida de archivos
+OK_FILE="$OK_DIR/status_codes_$TIMESTAMP.txt"
+ERROR_CLIENTE_FILE="$ERROR_CLIENTE_DIR/status_codes_$TIMESTAMP.txt"
+ERROR_SERVIDOR_FILE="$ERROR_SERVIDOR_DIR/status_codes_$TIMESTAMP.txt"
+
+# limpio archivos si hace falta
+> "$OK_FILE"
+> "$ERROR_CLIENTE_FILE"
+> "$ERROR_SERVIDOR_FILE"
+
+# lógica principal
+while IFS= read -r line; do
+	DOMINIO=$(echo $line | awk '{print $1}')
+	URL=$(echo $line | awk '{print $2}')
+	STATUS_CODE=$(curl -LI -o /dev/null -w '%{http_code}\n' -s "$URL")
+
+	if [[ $STATUS_CODE -ge 200 && $STATUS_CODE -lt 300 ]]; then
+		echo "$DOMAIN ($URL) - Estado: $STATUS_CODE" | tee -a "$OK_FILE"
+	elif [[ $STATUS_CODE -ge 400 && $STATUS_CODE -lt 500 ]]; then
+                echo "$DOMAIN ($URL) - Estado: $STATUS_CODE" | tee -a "$ERROR_CLIENTE_FILE"
+	elif [[ $STATUS_CODE -ge 500 && $STATUS_CODE -lt 600 ]]; then
+                echo "$DOMAIN ($URL) - Estado: $STATUS_CODE" | tee -a "$ERROR_SERVIDOR_FILE"
+	fi
+
+done < "$LISTA_URL"
+
+echo "Se ha guardado toda la información solicitada"
+
+
