@@ -1,0 +1,14 @@
+---
+# tasks file for 2PRecuperatorio
+
+- name: "Crear directorio"
+  file:
+    path: /tmp/alumno
+    state: directory
+    mode: '0755'
+
+
+- name: "Rol: 2PRecuperatorio"
+  template:
+    src: template_01.j2
+    dest: /tmp/alumno/datos.txt

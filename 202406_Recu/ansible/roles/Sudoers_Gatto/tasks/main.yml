@@ -1,0 +1,13 @@
+---
+# tasks file for Sudoers_Gatto
+#
+
+- name: Agregar usuarios a GProfesores
+  user:
+    name: "{{ item }}"
+    groups: GProfesores
+    append: yes
+  loop:
+    - Profesor
+    - Alumno
+

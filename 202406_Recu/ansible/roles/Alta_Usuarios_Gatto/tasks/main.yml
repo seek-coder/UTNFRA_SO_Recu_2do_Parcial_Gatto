@@ -1,0 +1,12 @@
+---
+# tasks file for Alta_Usuarios_Gatto
+
+- name: Crear Profesor
+  user:
+    name: Profesor
+    groups: GProfesores
+
+- name: Crear alumno
+  user:
+    name: Alumno
+    groups: GAlumnos

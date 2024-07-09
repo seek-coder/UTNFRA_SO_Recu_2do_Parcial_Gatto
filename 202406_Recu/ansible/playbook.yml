@@ -1,0 +1,26 @@
+---
+
+- hosts: all
+  become: yes
+
+  tasks:
+    - name: "Rol 2PRecuperatorio" 
+      include_role:
+        name: 2PRecuperatorio
+        
+    - name: "Rol Alta de usuarios"
+      include_role:
+        name: Alta_Usuarios_Gatto
+
+    - name: "Rol Sudoers"
+      include_role:
+        name: Sudoers_Gatto
+
+    - name: "Rol Instala-tools"
+      include_role:
+        name: Instala-tools_Gatto
+
+    - name: "Otra tarea"
+      debug:
+        msg: "Despues de la ejecucion del rol"
+

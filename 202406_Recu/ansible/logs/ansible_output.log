@@ -1,0 +1,360 @@
+2024-07-08 21:32:02,048 p=8469 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 21:32:02,420 p=8469 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 21:32:02,454 p=8469 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 21:32:02,533 p=8469 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 21:32:04,317 p=8469 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 21:32:04,339 p=8469 u=bgatto n=ansible | TASK [include_role : 2PRecuperatorio] *******************************************************************************************************************************************************************************************************
+2024-07-08 21:32:04,370 p=8469 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 21:32:04,388 p=8469 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Inicio de tareas dentro del Rol: 2PRecuperatorio"
+}
+2024-07-08 21:32:04,411 p=8469 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 21:32:04,431 p=8469 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 21:32:04,487 p=8469 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 21:32:04,487 p=8469 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 21:32:04,488 p=8469 u=bgatto n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:00:29,750 p=8877 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:00:29,848 p=8877 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:00:29,867 p=8877 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:00:29,952 p=8877 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 22:00:31,695 p=8877 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:00:31,712 p=8877 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:00:31,746 p=8877 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:00:32,552 p=8877 u=bgatto n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "checksum": "4f7715a0911ea3fd5799afa764b85a1885f2117c", "msg": "Destination directory /tmp/alumno does not exist"}
+2024-07-08 22:00:32,553 p=8877 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:00:32,554 p=8877 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:00:32,554 p=8877 u=bgatto n=ansible | localhost                  : ok=1    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:08:55,996 p=9191 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:08:56,067 p=9191 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:08:56,090 p=9191 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:08:56,140 p=9191 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 22:09:18,348 p=9191 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:09:18,375 p=9191 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:09:18,486 p=9191 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:09:19,578 p=9191 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:09:19,587 p=9191 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:09:21,631 p=9191 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:09:21,646 p=9191 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:09:21,696 p=9191 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario profesor] *****************************************************************************************************************************************************************************************
+2024-07-08 22:09:22,489 p=9191 u=bgatto n=ansible | fatal: [localhost]: FAILED! => {"changed": false, "msg": "Group GProfesores does not exist"}
+2024-07-08 22:09:22,491 p=9191 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:09:22,491 p=9191 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:09:22,491 p=9191 u=bgatto n=ansible | localhost                  : ok=3    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:12:04,225 p=9368 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:12:04,354 p=9368 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:12:04,393 p=9368 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:12:04,482 p=9368 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 22:12:05,960 p=9368 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:12:05,978 p=9368 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:12:06,026 p=9368 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:12:06,465 p=9368 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:12:06,474 p=9368 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:12:07,176 p=9368 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:12:07,194 p=9368 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:12:07,230 p=9368 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear grupo para profesor] **************************************************************************************************************************************************************************************
+2024-07-08 22:12:08,118 p=9368 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:12:08,127 p=9368 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear grupo para alumno] ****************************************************************************************************************************************************************************************
+2024-07-08 22:12:08,589 p=9368 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:12:08,597 p=9368 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario profesor] *****************************************************************************************************************************************************************************************
+2024-07-08 22:12:09,419 p=9368 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:12:09,428 p=9368 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario alumno] *******************************************************************************************************************************************************************************************
+2024-07-08 22:12:10,131 p=9368 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:12:10,142 p=9368 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:12:10,180 p=9368 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar a GProfesores] ************************************************************************************************************************************************************************************************
+2024-07-08 22:12:10,529 p=9368 u=bgatto n=ansible | failed: [localhost] (item=Profesor) => {"ansible_loop_var": "item", "changed": false, "item": "Profesor", "msg": "Unsupported parameters for (user) module: apppend. Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_expire_max, password_expire_min, password_expire_warn, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, umask, update_password (createhome, user)."}
+2024-07-08 22:12:10,896 p=9368 u=bgatto n=ansible | failed: [localhost] (item=Alumno) => {"ansible_loop_var": "item", "changed": false, "item": "Alumno", "msg": "Unsupported parameters for (user) module: apppend. Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_expire_max, password_expire_min, password_expire_warn, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, umask, update_password (createhome, user)."}
+2024-07-08 22:12:10,899 p=9368 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:12:10,900 p=9368 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:12:10,900 p=9368 u=bgatto n=ansible | localhost                  : ok=7    changed=4    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:15:23,681 p=9669 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:15:23,783 p=9669 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:15:23,809 p=9669 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:15:23,903 p=9669 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 22:15:25,365 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:25,390 p=9669 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:15:25,419 p=9669 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:15:25,882 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:25,892 p=9669 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:15:26,620 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:26,632 p=9669 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:15:26,687 p=9669 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear grupo para profesor] **************************************************************************************************************************************************************************************
+2024-07-08 22:15:27,133 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:27,140 p=9669 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear grupo para alumno] ****************************************************************************************************************************************************************************************
+2024-07-08 22:15:27,451 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:27,458 p=9669 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario profesor] *****************************************************************************************************************************************************************************************
+2024-07-08 22:15:28,062 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:28,071 p=9669 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario alumno] *******************************************************************************************************************************************************************************************
+2024-07-08 22:15:28,511 p=9669 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:15:28,525 p=9669 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:15:28,592 p=9669 u=bgatto n=ansible | TASK [Sudoers_Gatto : Ver si existe el usuario] *********************************************************************************************************************************************************************************************
+2024-07-08 22:15:29,138 p=9669 u=bgatto n=ansible | changed: [localhost] => (item=Profesor)
+2024-07-08 22:15:29,451 p=9669 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:15:29,459 p=9669 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar a GProfesores] ************************************************************************************************************************************************************************************************
+2024-07-08 22:15:29,785 p=9669 u=bgatto n=ansible | failed: [localhost] (item=Profesor) => {"ansible_loop_var": "item", "changed": false, "item": "Profesor", "msg": "Unsupported parameters for (user) module: apppend. Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_expire_max, password_expire_min, password_expire_warn, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, umask, update_password (createhome, user)."}
+2024-07-08 22:15:30,169 p=9669 u=bgatto n=ansible | failed: [localhost] (item=Alumno) => {"ansible_loop_var": "item", "changed": false, "item": "Alumno", "msg": "Unsupported parameters for (user) module: apppend. Supported parameters include: append, authorization, comment, create_home, expires, force, generate_ssh_key, group, groups, hidden, home, local, login_class, move_home, name, non_unique, password, password_expire_max, password_expire_min, password_expire_warn, password_lock, profile, remove, role, seuser, shell, skeleton, ssh_key_bits, ssh_key_comment, ssh_key_file, ssh_key_passphrase, ssh_key_type, state, system, uid, umask, update_password (createhome, user)."}
+2024-07-08 22:15:30,172 p=9669 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:15:30,172 p=9669 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:15:30,173 p=9669 u=bgatto n=ansible | localhost                  : ok=8    changed=1    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:17:54,009 p=9944 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:17:54,079 p=9944 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:17:54,102 p=9944 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:17:54,198 p=9944 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 22:17:55,623 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:55,654 p=9944 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:17:55,689 p=9944 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:17:56,182 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:56,190 p=9944 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:17:56,831 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:56,843 p=9944 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:17:56,878 p=9944 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear grupo para profesor] **************************************************************************************************************************************************************************************
+2024-07-08 22:17:57,294 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:57,301 p=9944 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear grupo para alumno] ****************************************************************************************************************************************************************************************
+2024-07-08 22:17:57,640 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:57,648 p=9944 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario profesor] *****************************************************************************************************************************************************************************************
+2024-07-08 22:17:58,202 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:58,209 p=9944 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear usuario alumno] *******************************************************************************************************************************************************************************************
+2024-07-08 22:17:58,619 p=9944 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:17:58,635 p=9944 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:17:58,697 p=9944 u=bgatto n=ansible | TASK [Sudoers_Gatto : Ver si existe el usuario] *********************************************************************************************************************************************************************************************
+2024-07-08 22:17:59,142 p=9944 u=bgatto n=ansible | changed: [localhost] => (item=Profesor)
+2024-07-08 22:17:59,501 p=9944 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:17:59,513 p=9944 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar a GProfesores] ************************************************************************************************************************************************************************************************
+2024-07-08 22:17:59,931 p=9944 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:18:00,443 p=9944 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:18:00,463 p=9944 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:18:00,509 p=9944 u=bgatto n=ansible | TASK [Instala-tools_Gatto : Instalar herramientas] ******************************************************************************************************************************************************************************************
+2024-07-08 22:18:19,727 p=9944 u=bgatto n=ansible | changed: [localhost] => (item=htop)
+2024-07-08 22:18:24,402 p=9944 u=bgatto n=ansible | failed: [localhost] (item=script) => {"ansible_loop_var": "item", "changed": false, "failures": ["No package script available."], "item": "script", "msg": "Failed to install some of the specified packages", "rc": 1, "results": []}
+2024-07-08 22:18:28,857 p=9944 u=bgatto n=ansible | ok: [localhost] => (item=tmux)
+2024-07-08 22:18:32,870 p=9944 u=bgatto n=ansible | ok: [localhost] => (item=tree)
+2024-07-08 22:18:41,605 p=9944 u=bgatto n=ansible | changed: [localhost] => (item=speedtest-cli)
+2024-07-08 22:18:41,610 p=9944 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:18:41,610 p=9944 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:18:41,611 p=9944 u=bgatto n=ansible | localhost                  : ok=9    changed=2    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:21:37,355 p=10391 u=bgatto n=ansible | - Role Alta_Usuarios_Gatto was created successfully
+2024-07-08 22:21:43,828 p=10393 u=bgatto n=ansible | - Role Sudoers_Gatto was created successfully
+2024-07-08 22:21:50,220 p=10395 u=bgatto n=ansible | - Role Instala-tools_Gatto was created successfully
+2024-07-08 22:24:31,226 p=10427 u=bgatto n=ansible | - Role Alta_Usuarios_Gatto was created successfully
+2024-07-08 22:24:38,381 p=10429 u=bgatto n=ansible | - Role Sudoers_Gatto was created successfully
+2024-07-08 22:24:43,351 p=10431 u=bgatto n=ansible | - Role Instala-tools_Gatto was created successfully
+2024-07-08 22:34:42,976 p=10607 u=bgatto n=ansible | [WARNING]: Unable to parse /home/bgatto/UTN-FRA_SO_Examenes/202406_Recu/ansible/inventory/host as an inventory source
+
+2024-07-08 22:34:42,977 p=10607 u=bgatto n=ansible | [WARNING]: No inventory was parsed, only implicit localhost is available
+
+2024-07-08 22:34:43,001 p=10607 u=bgatto n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-07-08 22:34:43,297 p=10607 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:34:43,297 p=10607 u=bgatto n=ansible | skipping: no hosts matched
+2024-07-08 22:34:43,297 p=10607 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:18,405 p=10617 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:35:18,473 p=10617 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:18,505 p=10617 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:18,712 p=10617 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: ssh: connect to host 127.0.0.1 port 22: Connection refused", "unreachable": true}
+2024-07-08 22:35:20,624 p=10617 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:35:20,647 p=10617 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:20,696 p=10617 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:35:21,179 p=10617 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:35:21,193 p=10617 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:35:21,900 p=10617 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:35:21,917 p=10617 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:21,963 p=10617 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:35:22,630 p=10617 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:35:22,637 p=10617 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:35:23,312 p=10617 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:35:23,325 p=10617 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:23,358 p=10617 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:35:23,773 p=10617 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:35:24,239 p=10617 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:35:24,256 p=10617 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:24,302 p=10617 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:24,318 p=10617 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:35:24,346 p=10617 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:35:24,346 p=10617 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:35:24,346 p=10617 u=bgatto n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:36:23,548 p=10981 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:36:23,622 p=10981 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:23,651 p=10981 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:24,537 p=10981 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbgatto@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-07-08 22:36:25,349 p=10981 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:36:25,367 p=10981 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:25,408 p=10981 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:36:25,855 p=10981 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:36:25,863 p=10981 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:36:26,556 p=10981 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:36:26,568 p=10981 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:26,600 p=10981 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:36:27,137 p=10981 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:36:27,143 p=10981 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:36:27,639 p=10981 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:36:27,655 p=10981 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:27,702 p=10981 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:36:28,055 p=10981 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:36:28,522 p=10981 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:36:28,538 p=10981 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:28,575 p=10981 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:28,596 p=10981 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:36:28,625 p=10981 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:36:28,626 p=10981 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:36:28,626 p=10981 u=bgatto n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:38:37,067 p=11226 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:38:37,178 p=11226 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:37,199 p=11226 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:37,545 p=11226 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbgatto@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-07-08 22:38:38,755 p=11226 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:38:38,774 p=11226 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:38,805 p=11226 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:38:39,265 p=11226 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:38:39,271 p=11226 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:38:39,927 p=11226 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:38:39,939 p=11226 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:39,979 p=11226 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:38:40,466 p=11226 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:38:40,474 p=11226 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:38:40,953 p=11226 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:38:40,966 p=11226 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:40,998 p=11226 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:38:41,392 p=11226 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:38:41,888 p=11226 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:38:41,902 p=11226 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:41,944 p=11226 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:41,988 p=11226 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:38:42,027 p=11226 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:38:42,028 p=11226 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:38:42,028 p=11226 u=bgatto n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:43:52,168 p=11504 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:43:52,239 p=11504 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:52,257 p=11504 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:52,410 p=11504 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbgatto@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-07-08 22:43:53,735 p=11504 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:43:53,757 p=11504 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:53,798 p=11504 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:43:54,209 p=11504 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:43:54,217 p=11504 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:43:54,826 p=11504 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:43:54,838 p=11504 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:54,865 p=11504 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:43:55,322 p=11504 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:43:55,330 p=11504 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:43:55,768 p=11504 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:43:55,784 p=11504 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:55,839 p=11504 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:43:56,176 p=11504 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:43:56,597 p=11504 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:43:56,610 p=11504 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:56,646 p=11504 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:56,667 p=11504 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:43:56,700 p=11504 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:43:56,700 p=11504 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:43:56,700 p=11504 u=bgatto n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:46:13,464 p=11735 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:46:13,534 p=11735 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:13,555 p=11735 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:13,994 p=11735 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbgatto@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-07-08 22:46:15,057 p=11735 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:46:15,080 p=11735 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:15,128 p=11735 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:46:15,560 p=11735 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:46:15,569 p=11735 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:46:16,260 p=11735 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:46:16,276 p=11735 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:16,309 p=11735 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:46:16,908 p=11735 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:46:16,916 p=11735 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:46:17,391 p=11735 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:46:17,406 p=11735 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:17,436 p=11735 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:46:17,995 p=11735 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:46:18,528 p=11735 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:46:18,544 p=11735 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:18,597 p=11735 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:18,636 p=11735 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:46:18,686 p=11735 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:46:18,686 p=11735 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:46:18,687 p=11735 u=bgatto n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:48:27,352 p=11965 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:48:27,477 p=11965 u=bgatto n=ansible | PLAY [Conexión a localhost] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:27,498 p=11965 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:28,784 p=11965 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:48:28,821 p=11965 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:28,827 p=11965 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:29,267 p=11965 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbgatto@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-07-08 22:48:30,054 p=11965 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:48:30,075 p=11965 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:30,112 p=11965 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:48:30,550 p=11965 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:48:30,559 p=11965 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:48:31,262 p=11965 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:48:31,275 p=11965 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:31,309 p=11965 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:48:31,852 p=11965 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:48:31,860 p=11965 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:48:32,324 p=11965 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:48:32,337 p=11965 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:32,371 p=11965 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:48:32,714 p=11965 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:48:33,187 p=11965 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:48:33,203 p=11965 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:33,241 p=11965 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:33,267 p=11965 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:48:33,306 p=11965 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:48:33,307 p=11965 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:48:33,307 p=11965 u=bgatto n=ansible | localhost                  : ok=8    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:54:26,389 p=12315 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:54:26,485 p=12315 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:26,505 p=12315 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:26,800 p=12315 u=bgatto n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbgatto@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-07-08 22:54:26,802 p=12315 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:26,802 p=12315 u=bgatto n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-07-08 22:54:31,296 p=12325 u=bgatto n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-07-08 22:54:31,365 p=12325 u=bgatto n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:31,386 p=12325 u=bgatto n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:32,762 p=12325 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:54:32,780 p=12325 u=bgatto n=ansible | TASK [Rol 2PRecuperatorio] ******************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:32,814 p=12325 u=bgatto n=ansible | TASK [2PRecuperatorio : Crear directorio] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:54:33,186 p=12325 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:54:33,195 p=12325 u=bgatto n=ansible | TASK [2PRecuperatorio : Rol: 2PRecuperatorio] ***********************************************************************************************************************************************************************************************
+2024-07-08 22:54:33,841 p=12325 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:54:33,854 p=12325 u=bgatto n=ansible | TASK [Rol Alta de usuarios] *****************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:33,900 p=12325 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear Profesor] *************************************************************************************************************************************************************************************************
+2024-07-08 22:54:34,415 p=12325 u=bgatto n=ansible | ok: [localhost]
+2024-07-08 22:54:34,422 p=12325 u=bgatto n=ansible | TASK [Alta_Usuarios_Gatto : Crear alumno] ***************************************************************************************************************************************************************************************************
+2024-07-08 22:54:34,881 p=12325 u=bgatto n=ansible | changed: [localhost]
+2024-07-08 22:54:34,895 p=12325 u=bgatto n=ansible | TASK [Rol Sudoers] **************************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:34,926 p=12325 u=bgatto n=ansible | TASK [Sudoers_Gatto : Agregar usuarios a GProfesores] ***************************************************************************************************************************************************************************************
+2024-07-08 22:54:35,255 p=12325 u=bgatto n=ansible | ok: [localhost] => (item=Profesor)
+2024-07-08 22:54:35,708 p=12325 u=bgatto n=ansible | changed: [localhost] => (item=Alumno)
+2024-07-08 22:54:35,725 p=12325 u=bgatto n=ansible | TASK [Rol Instala-tools] ********************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:35,766 p=12325 u=bgatto n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:35,783 p=12325 u=bgatto n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-07-08 22:54:35,807 p=12325 u=bgatto n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-07-08 22:54:35,807 p=12325 u=bgatto n=ansible | localhost                  : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
